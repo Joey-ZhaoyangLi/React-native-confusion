@@ -24,19 +24,8 @@ const MenuNavigator = createStackNavigator({
 );
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES,
-    };
-  }
-
-  static navigationOptions = {
-    title: 'Menu'
-  }
 
   render() {
-    const {navigate} = this.props.navigation
     return (
       <View style={{ flex: 1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
         <MenuNavigator />
